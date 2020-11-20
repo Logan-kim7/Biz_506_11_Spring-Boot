@@ -7,3 +7,12 @@
 그결과를 알기가 어렵다
 
 * 표준 web browser에서 
+
+# data-jpa 프로젝트
+* spring jpa 프로젝트에서 spring.datasource.initalize-mode 를 always로 설정한 후
+src/main/resources 폴더에 data.sql 파일을 생성한 후 insert SQL을 저장해 두면 
+프로젝트가 재 시작될때 data.sql 파일의 SQL문을 읽어서 데이터를 자동으로 추가한다
+샘플 데이터가 필요할때 사용하면 좋다.
+* 또한
+src/main/resources 폴더에 schema.sql 파일을 생성한 후 DDL SQL을 저장해두면
+프로젝트가 재 시작될떄 SQL문을 실행할수 있다.

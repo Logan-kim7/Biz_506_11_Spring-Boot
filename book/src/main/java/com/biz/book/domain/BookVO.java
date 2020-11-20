@@ -1,5 +1,6 @@
 package com.biz.book.domain;
 
+import javafx.scene.NodeBuilder;
 import lombok.*;
 
 import javax.persistence.*;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-
+@Builder
 @Entity
 @Table(name="tbl_book")
 public class BookVO {
@@ -31,7 +32,9 @@ public class BookVO {
 
     @Column(length = 125)
     private String comp;
-    private String price;
+
+    @Column(nullable = true)
+    private int price;
 
 
 
